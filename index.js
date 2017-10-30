@@ -10,11 +10,10 @@ module.exports = {
   createDeployPlugin(options) {
     const DeployPlugin = BasePlugin.extend({
       name: options.name,
-      runBefore: 'ember-cli-deploy-redis',
       defaultConfig: {port: 6379},
       requiredConfig: ['remote', 'component'],
 
-      willUpload() {
+      setup() {
         const remote = this.readConfig('remote'),
               component = this.readConfig('component'),
               port = this.readConfig('port');
@@ -31,7 +30,7 @@ module.exports = {
         return {tunnel: proc};
       },
 
-      didUpload(context) {
+      teardown(context) {
         this.log('Closing tunnel', {verbose: true});
         context.tunnel.kill('SIGTERM');
       }
