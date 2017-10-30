@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-deploy-nanobox-redis-tunnel",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "An ember-cli-deploy plugin to create an SSH tunnel to a Redis component hosted on Nanobox.",
   "keywords": [
     "ember-addon",
     "ember-cli-deploy-plugin"
