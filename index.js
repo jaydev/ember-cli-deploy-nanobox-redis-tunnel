@@ -15,17 +15,24 @@ module.exports = {
       requiredConfig: ['remote', 'component'],
 
       willUpload() {
+        const remote = this.readConfig('remote'),
+              component = this.readConfig('component'),
+              port = this.readConfig('port');
         const proc = spawn('nanobox', [
           'tunnel',
-          this.readConfig('remote'),
-          this.readConfig('component'),
+          remote,
+          component,
           '-p',
-          this.readConfig('port')
+          port
         ]);
+        this.log(`Connected to ${remote} ${component} on port ${port}`, {
+          verbose: true
+        });
         return {tunnel: proc};
       },
 
       didUpload(context) {
+        this.log('Closing tunnel', {verbose: true});
         context.tunnel.kill('SIGTERM');
       }
     });
