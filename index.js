@@ -24,14 +24,16 @@ module.exports = {
           '-p',
           port
         ]);
-        this.log(`Connected to ${remote} ${component} on port ${port}`, {
-          verbose: true
-        });
+        this.log(
+          `Connected to component \`${component}\` on port \`${port}\` ` +
+          `on remote \`${remote}\``,
+          {verbose: true}
+        );
         return {tunnel: proc};
       },
 
       teardown(context) {
-        this.log('Closing tunnel', {verbose: true});
+        this.log('Closing Redis tunnel', {verbose: true});
         context.tunnel.kill('SIGTERM');
       }
     });
