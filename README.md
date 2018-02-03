@@ -57,7 +57,13 @@ For detailed information on how configuration of plugins works, please refer to 
 
 ### component
 
-The name of your Nanobox Redis component, e.g. as defined in your Nanobox boxfile.yml
+*Required* The name of your Nanobox Redis component, e.g. as defined in your Nanobox boxfile.yml
+
+### remote
+
+* Required* The name of your Nanobox application. Eg the “App name” found by running `nanobox remote ls`
+
+*Default:* `undefined`
 
 ### port
 
@@ -65,15 +71,7 @@ The Redis port.
 
 *Default:* `6379`
 
-### remote
 
-The name of your Nanobox application. Eg the “App name” found by running `nanobox remote ls`
-
-*Default:* `undefined`
-
-## Prerequisites
-
-The following properties are expected to be present on the deployment `context` object:
 
 [1]: https://github.com/ember-cli-deploy/ember-cli-deploy-lightning-pack "ember-cli-deploy-lightning-pack"
 [2]: http://ember-cli-deploy.com/docs/v1.0.x/using-plugins/ "Plugin Documentation"
