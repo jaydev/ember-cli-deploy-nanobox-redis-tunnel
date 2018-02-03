@@ -57,11 +57,11 @@ For detailed information on how configuration of plugins works, please refer to 
 
 ### component
 
-*Required* The name of your Nanobox Redis component, e.g. as defined in your Nanobox boxfile.yml
+*Required* – The name of your Nanobox Redis component, e.g. as defined in your Nanobox boxfile.yml
 
 ### remote
 
-*Required* The name of your Nanobox application. Eg the “App name” found by running `nanobox remote ls`
+*Required* – The name of your Nanobox application. Eg the “App name” found by running `nanobox remote ls`
 
 ### port
 
