@@ -27,7 +27,7 @@ $ ember install ember-cli-deploy-nanobox-redis-tunnel
 
 ```javascript
 ENV['nanobox-redis-tunnel'] = {
-  component: 'your redis component name', // the name of your redis component eg data.redis – get this from boxfile.yml  
+  component: 'your redis component name',
   remote: 'your-app-name'
 }
 ```
