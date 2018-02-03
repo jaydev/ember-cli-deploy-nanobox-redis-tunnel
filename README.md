@@ -61,9 +61,7 @@ For detailed information on how configuration of plugins works, please refer to 
 
 ### remote
 
-* Required* The name of your Nanobox application. Eg the “App name” found by running `nanobox remote ls`
-
-*Default:* `undefined`
+*Required* The name of your Nanobox application. Eg the “App name” found by running `nanobox remote ls`
 
 ### port
 
