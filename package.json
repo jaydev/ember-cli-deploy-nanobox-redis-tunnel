@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-nanobox-redis-tunnel",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "An ember-cli-deploy plugin to create an SSH tunnel to a Redis component hosted on Nanobox.",
   "keywords": [
     "ember-addon",
